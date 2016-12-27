@@ -7,9 +7,9 @@ Author: Saurabh Badhwar <sbsaurabhbadhwar9@gmail.com>
 
 //Get the required libray
 var mongoose = require('mongoose');
-
+mongoose.set('debug', true);
 //The connection URI
-var dbURI = "mongodb://localhost/creativehr"
+var dbURI = "mongodb://127.0.0.1:27017/creativehr";
 
 //make the connection and handle the errors gracefully
 mongoose.connect(dbURI);
