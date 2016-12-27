@@ -9,6 +9,7 @@ Author: Saurabh Badhwar <sbsaurabhbadhwar9@gmail.com>
 //Setup dependencies, get the routes and express module
 var routes = require('./routes');
 var express = require('express');
+var mongoose =  require('./models/db');
 
 //Setup paths
 var paths = {
