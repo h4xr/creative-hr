@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mithilia Tech",
-  "license": "SEE LICENSE IN EULA.md"
+  "license": "SEE LICENSE IN EULA.md",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.7.5",
+    "unit.js": "^2.0.0"
+  }
 }
