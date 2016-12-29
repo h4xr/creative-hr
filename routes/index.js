@@ -8,7 +8,8 @@ var users = require('./users.js');
 
 module.exports.set = function(app) {
   app.get('/', function(req, res) {
-    res.json({'text':'hello'});
+    res.sendFile(app.paths.views+'index.html');
+    console.log(app.db);
   })
 
   users.set(app);

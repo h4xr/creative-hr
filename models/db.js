@@ -5,31 +5,34 @@ Date: 27/12/2016
 Author: Saurabh Badhwar <sbsaurabhbadhwar9@gmail.com>
 */
 
-//Get the required libray
-var mongoose = require('mongoose');
-mongoose.set('debug', true);
-//The connection URI
-var dbURI = "mongodb://127.0.0.1:27017/creativehr";
+//Get the required library
+var mongo = require('mongodb');
 
-//make the connection and handle the errors gracefully
-mongoose.connect(dbURI);
+//We need database configuration for things to work properly
+var config = require('../config');
 
-mongoose.connection.on('connected', function(){
-  console.log("Connection successful to the MongoDB: " + dbURI);
-});
+//Setup the uri string
+if(config.db.username != '') {
+  var dbURI = 'mongodb://'+ config.db.username + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.database;
+}
+else {
+  var dbURI = 'mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.database;
+}
 
-mongoose.connection.on('error', function(err){
-  console.log("Unable to connect to MongoDB instance: " + err);
-});
+//Connect with mongodb
+var mongo = require('mongodb');
+var mongoClient = mongo.MongoClient;
 
-mongoose.connection.on('disconnected', function(){
-  console.log("Connection closed to the MongoDB instance: " + dbURI);
-});
+var database = {};
 
-//Close the connection when the process ends
-process.on('SIGINT', function(){
-  mongoose.connection.close(function(){
-    console.log("Closing mongodb connection");
-    process.exit(0);
+module.exports.createConnection = function(app) {
+  mongoClient.connect(dbURI, function(err, db) {
+    if(err) {
+      console.log("Unable to connect to MongoDB server", err);
+    }
+    else {
+      console.log("Connection established with mongodb");
+      app.db = db;
+    }
   });
-})
+};

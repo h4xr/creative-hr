@@ -7,7 +7,7 @@ Author: Saurabh Badhwar <sbsaurabhbadhwar9@gmail.com>
 */
 
 //Setup dependencies, get the routes and express module
-var mongoose =  require('./models/db');
+var db =  require('./models/db');
 var routes = require('./routes');
 var express = require('express');
 
@@ -18,6 +18,11 @@ var paths = {
 
 //Setup the application
 var app = express();
+app.paths = paths;
+app.use('/static', express.static('static'));
+
+//Connect to the database
+db.createConnection(app);
 
 //Setup the routes for the application
 routes.set(app);
@@ -26,7 +31,5 @@ routes.set(app);
 var host = process.env.HOST || '127.0.0.1';
 var port = process.env.PORT || 8000;
 app.listen(port, host, function(){
-  console.log(mongoose);
   console.log("Captain! We are up and running on " + host + ":" + port);
-  console.log(paths.views);
 });
