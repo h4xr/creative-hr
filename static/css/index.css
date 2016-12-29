@@ -1,0 +1,425 @@
+/*
+File: index.css
+Description: The common CSS file
+Version: 1.0.a1
+Date: 28/12/2016
+Author: Saurabh Badhwar <sbsaurabhbadhwar9@gmail.com>
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom CSS */
+
+/* Common Classes */
+.box {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+.transition {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+}
+
+/* Element Styling */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background: #eee;
+  font-size: 18px;
+}
+
+.home-header {
+  position: relative;
+
+  width: 100%;
+  background: #08224a;
+
+  overflow: hidden;
+}
+
+.primary-nav {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.nav-button {
+  position: relative;
+
+  float: right;
+  margin: 10px 10px;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+
+  background-color: #eee;
+  color: #08224a;
+
+  width: 80px;
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #1350adcc;
+  background-color: white;
+}
+
+.header-info {
+  position: relative;
+
+  width: 70%;
+  height: 200px;
+
+  margin: 0 auto;
+  padding: 50px 10%;
+
+  line-height: 2em;
+
+  text-align: center;
+
+  color: #eee;
+}
+
+.header-title {
+  position: relative;
+
+  line-height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.header-slogan {
+  position: relative;
+
+  line-height: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+
+  letter-spacing: 1px;
+}
+
+.job-search {
+  position: relative;
+
+  width: 70%;
+  height: 100px;
+
+  margin: 0 auto;
+}
+
+.job-search-form {
+  position: relative;
+
+  width: 70%;
+
+  margin: 0 auto;
+}
+
+.job-search-input {
+  position: relative;
+  display: block;
+
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  float: left;
+
+  font-family: 'Open Sans', sans-serif;
+
+  background-color: #eee;
+  padding: 2px 5px;
+}
+
+.job-search-submit {
+  position: relative;
+  display: block;
+
+  width: 20%;
+  height: 40px;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  float: left;
+
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #eee;
+
+  padding: 2px 5px;
+}
+
+.job-search-submit:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* Home content wrapper */
+.home-content-wrapper {
+  position: relative;
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.home-slogan {
+  position: relative;
+
+  width: 80%;
+
+  margin: 0 auto;
+  padding: 10px 0;
+
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+
+  text-align: center;
+  color: #3c3939cc;
+}
+
+.job-section-container {
+  position: relative;
+
+  width: 80%;
+  margin: 10px auto;
+
+  background: white;
+}
+
+.job-section-header {
+  position: relative;
+
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.job-category {
+  position: relative;
+  display: block;
+
+  float: left;
+  width: 25%;
+  height: 40px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 5px solid transparent;
+
+  font-family: 'Open Sans', sans-serif;
+  line-height: 40px;
+
+  background: #e6e6eae6;
+  color: #3c3939cc;
+
+  cursor: pointer;
+}
+
+.job-category:hover {
+  border-bottom: 5px solid #08224a;
+}
+
+.job-section-table {
+  position: relative;
+
+  width: 100%;
+
+  display: table;
+
+  padding: 10px 0;
+}
+
+.job-table-header {
+  position: relative;
+
+  display: table-row;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  position: relative;
+  display: table-cell;
+
+  text-align: center;
+  width: 25%;
+}
+
+.job-table-body {
+  position: relative;
+
+  width: 100%;
+  display: table-row-group;
+}
+
+.job {
+  position: relative;
+
+  width: 100%;
+  display: table-row;
+}
+
+.job-detail {
+  position: relative;
+
+  width: 25%;
+  display: table-cell;
+
+  padding: 5px 0;
+
+  text-align: center;
+
+  font-family: 'Open Sans', sans-serif;
+
+  cursor: pointer;
+}
+
+/* Website footer */
+.site-footer {
+  position: relative;
+
+  width: 100%;
+
+  background: #08224a;
+
+  padding: 20px 0;
+}
+
+.footer-content {
+  position: relative;
+
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-box {
+  position: relative;
+
+  display: inline-block;
+
+  width: 30%;
+  margin: 0 auto;
+}
+
+.footer-box-title {
+  position: relative;
+
+  text-align: left;
+  color: #eee;
+
+  width: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.footer-box-content {
+  position: relative;
+
+  text-align: left;
+  color: #eee;
+
+  width: 100%;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.box-content {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 20px;
+
+  padding: 2px 0;
+
+  cursor: pointer;
+}
+
+#copyright {
+  position: relative;
+
+  width: 100%;
+  height: 20px;
+
+  line-height: 40px;
+
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+
+  color: #eee;
+}
