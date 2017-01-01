@@ -25,7 +25,7 @@ var mongoClient = mongo.MongoClient;
 
 var database = {};
 
-module.exports.createConnection = function(app) {
+module.exports.createConnection = function(app, callback) {
   mongoClient.connect(dbURI, function(err, db) {
     if(err) {
       console.log("Unable to connect to MongoDB server", err);
@@ -33,6 +33,7 @@ module.exports.createConnection = function(app) {
     else {
       console.log("Connection established with mongodb");
       app.db = db;
+      callback();
     }
   });
 };

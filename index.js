@@ -21,15 +21,17 @@ var app = express();
 app.paths = paths;
 app.use('/static', express.static('static'));
 
-//Connect to the database
-db.createConnection(app);
-
-//Setup the routes for the application
-routes.set(app);
-
+//Setup the server start callback
 //Setup the port and host and get the application running
 var host = process.env.HOST || '127.0.0.1';
 var port = process.env.PORT || 8000;
-app.listen(port, host, function(){
-  console.log("Captain! We are up and running on " + host + ":" + port);
-});
+var startServer = function() {
+  //Setup the routes for the application
+  routes.set(app);
+  //Start listening
+  app.listen(port, host, function(){
+    console.log("Captain! We are up and running on " + host + ":" + port);
+  });
+};
+//Connect to the database
+db.createConnection(app, startServer);
