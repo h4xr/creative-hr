@@ -21,6 +21,9 @@ var app = express();
 app.paths = paths;
 app.use('/static', express.static('static'));
 
+//Setup view engine
+app.set('view engine', 'jade');
+
 //Setup the server start callback
 //Setup the port and host and get the application running
 var host = process.env.HOST || '127.0.0.1';

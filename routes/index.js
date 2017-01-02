@@ -8,7 +8,7 @@ var users = require('./users.js');
 
 module.exports.set = function(app) {
   app.get('/', function(req, res) {
-    res.sendFile(app.paths.views+'index.html');
+    res.render('index.jade');
     console.log(app.db);
   })
 

@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    title= appTitle
+    block fonts
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto")
+    block stylesheet
+      link(rel="stylesheet", href="/static/css/index.css")
+      link(rel="stylesheet", href="/static/css/animate.css")
+      link(rel="stylesheet", href="/static/css/morphext.css")
+    block scripts
+      script(type="text/javascript", src="/static/js/jquery.js")
+      script(type="text/javascript", src="/static/js/morphext.min.js")
+  body.container
+    block header
+      header
+        nav#primary-nav.box
+          ul.primary-nav-links
+            li.primary-nav-link.box.transition 
+              a.link.transition(href="/about") About US
+            li.primary-nav-link.box.transition 
+              a.link.transition(href="/products") Products 
+            li.primary-nav-link.box.transition.home-link 
+              a.link.transition(href="/") Creative HR Quantum
+            li.primary-nav-link.box.transition
+              a.link.transition(href="/services") Services
+            li.primary-nav-link.box.transition 
+              a.link.transition(href="/contact") Contact US
+    block content
+    block footer
+      footer
+      div#copyright
+        p &copy; 2017 Creative HR Quantum | All Rights Reserved
+      script(type="text/javascript", src="/static/js/main.js")
+      
+      
+    
+    
