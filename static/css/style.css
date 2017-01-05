@@ -74,18 +74,36 @@ h1, h2, h3, h4, h5, h6{
 }
 
 @-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
+  from { bottom:-100px; opacity:0 }
   to { bottom:0px; opacity:1 }
 }
 
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
   to{ bottom:0; opacity:1 }
 }
 
 /***********************************
 ************************************
-HEADER 
+Registration and Login
+************************************
+***********************************/
+#reg-form, #login-form {
+	position: fixed;
+
+	background: #eee;
+	border-radius: 8px;
+
+	margin-top: 100px;
+	padding: 50px 10px;
+
+	z-index: 100;
+}
+
+
+/***********************************
+************************************
+HEADER
 ************************************
 ***********************************/
 .header{
@@ -105,7 +123,7 @@ HEADER
 .navbar-default {
     background-color: transparent;
     border:0px;
-    padding: 20px 0; 
+    padding: 20px 0;
     transition: all 0.3s;
 }
 
@@ -115,7 +133,7 @@ HEADER
 }
 
 .top-nav-collapse {
-    padding: 0; 
+    padding: 0;
     background: rgba(64,75,97, 0.9);
 }
 
@@ -676,7 +694,7 @@ cta
     background-color: rgb(73, 84, 105);
 }
 .cta .cta-info {
-    
+
     width: 100%;
     float: left;
     padding: 30px 25px 30px 15px;

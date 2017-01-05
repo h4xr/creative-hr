@@ -14,6 +14,39 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/static/css/style.css')
   body
     .loader
+    // Registration and Login overlay
+    div.modal#register
+      div.row
+        form.col-md-4.col-xs-10.col-md-push-4.col-xs-push-1#reg-form
+          div.form-group
+            label(for="email") Your Name
+            input.form-control(type="text", name="name", placeholder="Full Name")
+          div.form-group
+            label(for="email") Your E-Mail Address
+            input.form-control(type="text", name="email", placeholder="Email address")
+          div.form-group
+            label(for="mobile") Contact Number
+            input.form-control(type="text", name="mobile", placeholder="Contact No.")
+          div.form-group
+            label(for="city") City
+            input.form-control(type="text", name="city", placeholder="City")
+          div.form-group
+            label(for="state") State
+            input.form-control(type="text", name="state", placeholder="State")
+          div.form-group
+            label(for="country") Country
+            input.form-control(type="text", name="country", placeholder="Country")
+          button.btn.btn-primary Register
+    div.modal#login
+      div.row
+        form.col-md-4.col-xs-10.col-md-push-4.col-xs-push-1#login-form
+          div.form-group
+            label(for="email") Your E-Mail Address
+            input.form-control(type="text", name="email", placeholder="Email address")
+          div.form-group
+            label(for="password") Password
+            input.form-control(type="password", name="password", placeholder="Password")
+          button.btn.btn-primary Login
     #myDiv
       // HEADER
       .header
@@ -34,11 +67,11 @@ html(lang='en')
                     li.active
                       a(href='#main-header') Home
                     li
-                      a(href='#feature') About
+                      a(href='/about') About
                     li
                       a(href='#service') Services
                     li
-                      a(href='#portfolio') Portfolio
+                      a(href='#feature') Products
                     li
                       a(href='#testimonial') Testimonial
                     li
@@ -56,8 +89,8 @@ html(lang='en')
                   p.bnr-para
                     | Drive Performance. Drive Excellence. Leverage Creativity. Leverage Technology. Showcase Talent. Showcase Brand.
                   .brn-btn
-                    a.btn.btn-download(href='#') Register now!
-                    a.btn.btn-more(href='#') Login
+                    a.btn.btn-download(href='#', data-toggle="modal", data-target="#register") Register now!
+                    a.btn.btn-more(href='#', data-toggle="modal", data-target="#login") Login
                   .overlay-detail
                     a(href='#feature')
                       i.fa.fa-angle-down
@@ -265,15 +298,15 @@ html(lang='en')
               .loction-info.white
                 p
                   i.fa.fa-map-marker.fa-fw.pull-left.fa-2x
-                  | A99 Adam Street
+                  | Delhi
                   br
-                  | Texas, TX 555072
+                  | Delhi, India
                 p
                   i.fa.fa-envelope-o.fa-fw.pull-left.fa-2x
-                  | info@baker.com
+                  | info@creativehr.com
                 p
                   i.fa.fa-phone.fa-fw.pull-left.fa-2x
-                  | +41 5787 2323
+                  | +91 1234 5678
             .col-md-6.col-sm-6.col-xs-12
               .contact-form
                 #sendmessage Your message has been sent. Thank you!
